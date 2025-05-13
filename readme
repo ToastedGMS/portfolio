@@ -1,0 +1,33 @@
+# Gabriel Siqueira – Web Developer Portfolio
+
+This is my personal portfolio website, built to showcase my web development projects and skills.  
+It is a fully static site, hosted with GitHub Pages.
+
+## 🌐 Live Site
+
+👉 [https://yourusername.github.io](https://yourusername.github.io)
+
+## 📁 Structure
+
+- `index.html` — Home page (Portuguese)
+- `english.html` — Home page (English)
+- `about.html` — About me (Portuguese)
+- `about-en.html` — About me (English)
+- `public/` — Images and assets
+- `stylesheets/` — CSS styles
+
+## 🛠️ Technologies
+
+- HTML5
+- CSS3
+- Font Awesome
+- Hosted via GitHub Pages
+
+## 📫 Contact
+
+- [LinkedIn](https://www.linkedin.com/in/gabriel-siqueira-5256111ab/)
+- [GitHub](https://github.com/ToastedGMS)
+
+---
+
+© Gabriel Siqueira – 2025
