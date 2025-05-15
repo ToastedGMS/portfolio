@@ -80,8 +80,9 @@ a {
 }
 
 .projects {
-	display: grid;
-	grid-template-columns: repeat(2, auto);
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
 	padding: 2em;
 }
 
@@ -97,16 +98,18 @@ a {
 
 .project {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	gap: 1em;
 	max-width: 80%;
 	padding: 1em;
 	border-radius: 15px;
-	box-shadow: 0 0 10px rgb(0, 0, 0);
-	background-color: #bbc3b4;
+	background-color: #f2f5f0;
 	transition: background-color 0.3s ease;
+	border: 1px solid #7a928238;
 }
 
+.project-info {
+	order: 1;
+}
 .project:hover {
 	cursor: pointer;
 	background-color: #7a9282;
@@ -114,7 +117,8 @@ a {
 
 .project img {
 	border-radius: 15px;
-	max-width: 90%;
+	max-width: 60%;
+	order: 2;
 }
 
 .project-highlights {
@@ -195,10 +199,12 @@ footer {
 
 	.project {
 		max-width: 100%;
+		flex-direction: column;
 	}
 
 	.project img {
 		max-width: 100%;
+		order: 1;
 	}
 
 	.about {
