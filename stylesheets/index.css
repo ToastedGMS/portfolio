@@ -121,6 +121,10 @@ a {
 	order: 2;
 }
 
+.project.reverse {
+	flex-direction: row-reverse;
+}
+
 .project-highlights {
 	list-style: none;
 	padding-left: 0;
@@ -199,6 +203,10 @@ footer {
 
 	.project {
 		max-width: 100%;
+		flex-direction: column;
+	}
+
+	.project.reverse {
 		flex-direction: column;
 	}
 
