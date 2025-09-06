@@ -16,128 +16,251 @@
 			property="og:url"
 			content="https://toastedgms.github.io/portfolio/english.html"
 		/>
-
 		<meta
 			name="description"
 			content="Gabriel Siqueira's portfolio website, showcasing projects and skills."
 		/>
-		<link rel="stylesheet" href="stylesheets/index.css" />
-		<link
-			rel="preload"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-			as="style"
-		/>
+
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+
 		<title>Gabriel Siqueira</title>
+
+		<script>
+			function scrollCarouselLeft() {
+				const carousel = document.querySelector('.carousel-scroll');
+				carousel.scrollBy({ left: -300, behavior: 'smooth' });
+			}
+
+			function scrollCarouselRight() {
+				const carousel = document.querySelector('.carousel-scroll');
+				carousel.scrollBy({ left: 300, behavior: 'smooth' });
+			}
+		</script>
+
+		<style>
+			@keyframes slideFadeIn {
+				0% {
+					opacity: 0;
+					transform: translateY(-20px);
+				}
+				100% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+			.scrollbar-hide::-webkit-scrollbar {
+				display: none;
+			}
+			.scrollbar-hide {
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+			}
+		</style>
 	</head>
-	<body>
-		<header>
-			<nav class="main-nav">
-				<p class="site-title">Gabriel Siqueira</p>
-				<ul class="nav-links">
-					<li><a href="./index.html">Português</a></li>
-					<li><a href="./english.html">English</a></li>
-					<li><a href="./about-en.html">About</a></li>
+	<body class="m-0 p-0 bg-[#f4f5f4] font-sans text-[#2b2a2a]">
+		<!-- Header -->
+		<header
+			class="px-4 py-4 bg-white flex flex-wrap justify-between items-center border-b border-gray-300 text-sm"
+		>
+			<nav class="w-full flex flex-row justify-between items-center gap-2">
+				<p class="font-extrabold text-lg cursor-pointer">Gabriel Siqueira</p>
+				<ul class="list-none flex flex-row gap-2 sm:gap-4 mt-2 sm:mt-0">
+					<li>
+						<a
+							href="./index.html"
+							class="font-medium text-gray-800 hover:text-[#536461] transition-colors"
+							>Português</a
+						>
+					</li>
+					<li>
+						<a
+							href="./english.html"
+							class="font-medium text-gray-800 hover:text-[#536461] transition-colors"
+							>English</a
+						>
+					</li>
+					<li>
+						<a
+							href="./about-en.html"
+							class="font-medium text-gray-800 hover:text-[#536461] transition-colors"
+							>About</a
+						>
+					</li>
 				</ul>
 			</nav>
 		</header>
 
-		<main>
-			<h1>Digital solutions that save time and boost results.</h1>
+		<!-- Main -->
+		<main class="flex flex-col items-center justify-center">
+			<h1
+				class="text-center font-bold text-[#536461] text-[clamp(1.5rem,6vw,3em)] min-h-[90vh] px-4 flex items-center justify-center animate-[slideFadeIn_3s_ease-in]"
+			>
+				Digital solutions that save time and boost results.
+			</h1>
 
-			<section class="projects">
-				<div class="project-container">
-					<a
-						class="project"
-						href="https://price-tracker-production-6d73.up.railway.app/"
+			<!-- Projects -->
+			<section class="flex flex-col gap-6 px-4 py-6 w-full">
+				<h2 class="text-xl sm:text-2xl text-center font-semibold">
+					Featured Project
+				</h2>
+				<div class="flex justify-center w-full">
+					<article
+						class="flex items-center flex-col gap-6 w-full max-w-[900px] p-4 rounded-2xl bg-[#f2f5f0] border border-[#7a928238] cursor-pointer"
 					>
-						<img
-							src="public/preçoRadarDemo.png"
-							alt="Homepage of the website preçoRadar, created by me."
-						/>
-						<div class="project-info">
-							<h2>PreçoRadar</h2>
-							<p>
-								<strong>PreçoRadar</strong> is an application that tracks the
-								daily prices of essential products in supermarkets across Belo
-								Horizonte. Fully developed by me, the project automates
-								real-time data collection and displays everything in a clear and
-								interactive way for users.
-							</p>
-							<p>
-								Aimed at solving the difficulty of tracking price changes amid
-								scattered or manipulated information, the app delivers a simple
-								and intuitive experience on both mobile and desktop devices.
-							</p>
-							<ul class="project-highlights">
-								<li>
-									Automated scraping of APIs and websites from supermarkets in
-									Belo Horizonte
-								</li>
-								<li>
-									Frontend built with React and interactive data visualizations
-									(Recharts)
-								</li>
-								<li>
-									Node.js + Express backend with robust data processing logic
-								</li>
-								<li>PostgreSQL database managed with Prisma ORM</li>
-							</ul>
+						<!-- Carousel -->
+						<div
+							class="relative w-full max-w-[900px] overflow-hidden rounded-2xl"
+						>
+							<div
+								class="flex carousel-scroll overflow-x-auto gap-4 scroll-smooth snap-x snap-mandatory scrollbar-hide"
+							>
+								<figure
+									class="flex-[0_0_100%] snap-start flex justify-center items-center"
+								>
+									<img
+										src="/public/PGadminLogin.png"
+										alt="Admin Login Screenshot"
+										class="max-h-[80vh] w-auto rounded-2xl object-contain"
+									/>
+								</figure>
+								<figure
+									class="flex-[0_0_100%] snap-start flex justify-center items-center"
+								>
+									<img
+										src="/public/PauladaGamesDashboard.png"
+										alt="Dashboard Screenshot"
+										class="max-h-[80vh] w-auto rounded-2xl object-contain"
+									/>
+								</figure>
+								<figure
+									class="flex-[0_0_100%] snap-start flex justify-center items-center"
+								>
+									<img
+										src="/public/PGDashboardHP.png"
+										alt="Homepage Screenshot"
+										class="max-h-[80vh] w-auto rounded-2xl object-contain"
+									/>
+								</figure>
+								<!-- Optional video slide -->
+								<!--
+              <figure class="flex-[0_0_100%] snap-start flex justify-center items-center">
+                <video src="/public/PGDemo.mp4" controls class="max-h-[80vh] w-auto rounded-2xl object-contain"></video>
+              </figure>
+              --></div>
+
+							<!-- Navigation Buttons -->
+							<!-- Left Arrow Button -->
+							<button
+								onclick="scrollCarouselLeft()"
+								class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 px-2 py-1 sm:px-3 sm:py-2 bg-slate-400 text-white rounded-full z-20 hover:bg-slate-700 text-sm sm:text-base"
+							>
+								<i class="fa-solid fa-arrow-left"></i>
+							</button>
+
+							<!-- Right Arrow Button -->
+							<button
+								onclick="scrollCarouselRight()"
+								class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 px-2 py-1 sm:px-3 sm:py-2 bg-slate-400 text-white rounded-full z-20 hover:bg-slate-700 text-sm sm:text-base"
+							>
+								<i class="fa-solid fa-arrow-right"></i>
+							</button>
 						</div>
-					</a>
-				</div>
-			</section>
-			<section class="projects">
-				<div class="project-container">
-					<a class="project reverse" href="https://orion-ndk.netlify.app/">
-						<img
-							src="public/orionNDKDemo.webp"
-							alt="Homepage of the Orion-NDK mini social network, created by me."
-						/>
-						<div class="project-info">
-							<h2>Orion-NDK</h2>
+
+						<!-- Project description -->
+						<div class="flex flex-col gap-4 text-sm sm:text-base px-2">
+							<h2 class="text-xl sm:text-2xl font-bold">Paulada Games</h2>
 							<p>
-								<strong>Orion-NDK</strong> is a mini social network inspired by
-								the biggest names in the industry. Developed by me and based on
-								modern platforms used worldwide, the project allows people to
-								express themselves and share their daily lives in a fast and
-								intuitive way.
+								<strong>Paulada Games</strong> is a custom-built e-commerce
+								platform designed to connect customers and businesses with speed
+								and ease.
 							</p>
 							<p>
-								Users can post photos, create and edit their profiles, add
-								friends and acquaintances, and interact with each other's posts.
-								With real-time notifications and a responsive design, the
-								experience is seamless across both desktop and mobile devices.
+								Split into two frontends — one for customers and one for admins
+								— the system offers full control over products, categories, and
+								users, with real-time updates. Built with a
+								<strong>Feature-First</strong> architecture for scalability and
+								maintainability.
 							</p>
-							<ul class="project-highlights">
-								<li>Responsive and intuitive frontend built with React.</li>
-								<li>Real-time notifications via WebSockets (Socket.IO).</li>
-								<li>Node.js + Express backend with REST architecture.</li>
-								<li>PostgreSQL database managed with Prisma ORM.</li>
+							<p>
+								Based in the city of Contagem - MG, the store was looking for a
+								solution to quickly and efficiently direct its customers from a
+								product search to its WhatsApp. In addition, we implemented a
+								fully managed catalog controlled by the store administrator,
+								giving them complete control over their products and how they
+								are displayed.
+							</p>
+
+							<ul class="list-disc list-inside space-y-2">
+								<li>
+									<strong>🛒 WhatsApp Integration:</strong> Shopping cart sends
+									items directly to the store’s WhatsApp.
+								</li>
+								<li>
+									<strong>🔐 Admin Dashboard:</strong> JWT-protected interface
+									with full CRUD for products, categories, and admin users.
+								</li>
+								<li>
+									<strong>📦 Image Uploads:</strong> Integrated with
+									<code>multer</code> and <code>Cloudinary</code>, with cropping
+									and preview via <code>react-easy-crop</code>.
+								</li>
+								<li>
+									<strong>📱 Responsive UI:</strong> Swipeable carousels,
+									dynamic pages, mobile-first design.
+								</li>
+								<li>
+									<strong>🧠 RESTful Backend:</strong> Built with
+									<code>Node.js</code>, <code>Express</code>,
+									<code>PostgreSQL</code>, and <code>Prisma ORM</code>.
+								</li>
+								<li>
+									<strong>🧪 Automated Testing:</strong> Unit and integration
+									tests using <code>Vitest</code> and <code>Jest</code>,
+									following TDD.
+								</li>
+								<li>
+									<strong>🧱 Clean Architecture:</strong> Feature-based
+									structure with TypeScript.
+								</li>
+								<li>
+									<strong>🛠️ Tech Stack:</strong> React, React Router, React
+									Query, TailwindCSS, Vitest, Vite, Prisma, PostgreSQL, Express,
+									Node.js, Cloudinary, Multer, JWT, TypeScript.
+								</li>
 							</ul>
+							<p>
+								This project delivers a complete solution — from UI design to
+								backend infrastructure — focused on usability, security, and
+								scalability.
+							</p>
 						</div>
-					</a>
+						<a
+							href="https://www.pauladagames.com.br"
+							class="border-4 px-4 py-2 rounded-3xl font-bold hover:bg-slate-200 hover:shadow-lg"
+							>Explore Paulada Games</a
+						>
+					</article>
 				</div>
 			</section>
 
-			<section class="about-section">
-				<p class="about">
+			<!-- About -->
+			<section
+				class="flex flex-col items-center text-center px-4 py-6 max-w-[800px] mx-auto text-sm sm:text-base"
+			>
+				<p class="mb-2">
 					Hi, I'm Gabriel — a full-stack web developer based in the metropolitan
-					area of Belo Horizonte. I build digital solutions with a focus on
-					functionality, clarity, and real-world impact. I enjoy turning ideas
-					into accessible, well-crafted experiences that make your day-to-day
-					easier through code.
+					area of Belo Horizonte. I build digital solutions focused on
+					functionality, clarity, and real-world impact.
 				</p>
-
-				<p class="about-cta">
-					I'm currently seeking my first professional opportunity in the field.
+				<p class="text-[#444] mb-6">
+					I'm currently seeking my next professional opportunity in the field.
 					Let's connect!
 				</p>
-
-				<div class="social-links">
+				<div class="flex gap-4 text-xl justify-center">
 					<a
 						href="https://www.linkedin.com/in/gabriel-siqueira-5256111ab/"
 						class="fa-brands fa-linkedin"
@@ -155,6 +278,10 @@
 				</div>
 			</section>
 		</main>
-		<footer><p>© Gabriel Siqueira 2025</p></footer>
+
+		<!-- Footer -->
+		<footer class="text-center opacity-50 py-2 text-sm">
+			<p>© Gabriel Siqueira 2025</p>
+		</footer>
 	</body>
 </html>

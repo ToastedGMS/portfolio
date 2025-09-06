@@ -13,41 +13,82 @@
 			property="og:url"
 			content="https://toastedgms.github.io/portfolio/about.html"
 		/>
-
 		<meta
 			name="description"
 			content="Mais informações sobre Gabriel Siqueira e sua trajetória como desenvolvedor."
 		/>
-		<link rel="stylesheet" href="stylesheets/index.css" />
+
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+
 		<title>Sobre - Gabriel Siqueira</title>
+
+		<style>
+			@keyframes slideFadeIn {
+				0% {
+					opacity: 0;
+					transform: translateY(-20px);
+				}
+				100% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+		</style>
 	</head>
-	<body>
-		<header>
-			<nav class="main-nav">
+	<body class="m-0 p-0 bg-[#f4f5f4] font-sans text-[#2b2a2a]">
+		<!-- Header -->
+		<header
+			class="px-4 py-4 bg-white flex flex-wrap justify-between items-center border-b border-gray-300 text-sm"
+		>
+			<nav class="w-full flex flex-row justify-between items-center gap-2">
 				<p
-					class="site-title"
+					class="font-bold text-lg cursor-pointer"
 					onclick="window.location.href='index.html'"
-					style="cursor: pointer"
 				>
 					Gabriel Siqueira
 				</p>
-				<ul class="nav-links">
-					<li><a href="./index.html">Português</a></li>
-					<li><a href="./english.html">English</a></li>
-					<li><a href="./about.html">Sobre</a></li>
+				<ul class="list-none flex flex-row gap-2 sm:gap-4 mt-2 sm:mt-0">
+					<li>
+						<a
+							href="./index.html"
+							class="font-medium text-gray-800 hover:text-[#536461] transition-colors"
+							>Português</a
+						>
+					</li>
+					<li>
+						<a
+							href="./english.html"
+							class="font-medium text-gray-800 hover:text-[#536461] transition-colors"
+							>English</a
+						>
+					</li>
+					<li>
+						<a
+							href="./about.html"
+							class="font-medium text-gray-800 hover:text-[#536461] transition-colors"
+							>Sobre</a
+						>
+					</li>
 				</ul>
 			</nav>
 		</header>
 
-		<main>
-			<h1>Sobre Mim</h1>
+		<!-- Main -->
+		<main class="flex flex-col items-center justify-center">
+			<h1
+				class="text-center font-bold text-[#536461] text-[clamp(1.5rem,6vw,3em)] min-h-[90vh] px-4 flex items-center justify-center animate-[slideFadeIn_3s_ease-in]"
+			>
+				Sobre Mim
+			</h1>
 
-			<section class="about-section">
-				<p class="about">
+			<section
+				class="flex flex-col items-center text-center px-4 py-6 max-w-[800px] mx-auto text-sm sm:text-base"
+			>
+				<p class="mb-4">
 					Meu nome é Gabriel Siqueira, crio soluções digitais. Sou um
 					desenvolvedor da região metropolitana de Belo Horizonte. Meu foco está
 					em usar ferramentas de desenvolvimento web para construir aplicações
@@ -55,21 +96,21 @@
 					resultado.
 				</p>
 
-				<p class="about">
+				<p class="mb-4">
 					Meus projetos partem de uma ideia simples: usar código para economizar
 					tempo, automatizar tarefas e facilitar decisões. Usando ferramentas
 					como React, Node.js, Express e PostgreSQL, faço a web trabalhar por
 					você.
 				</p>
 
-				<p class="about">
-					Atualmente busco minha primeira oportunidade profissional na área.
+				<p class="mb-6">
+					Atualmente busco minha próxima oportunidade profissional na área.
 					Estou pronto para contribuir com projetos que exigem iniciativa,
 					pensamento prático e soluções que fazem diferença de verdade. Vamos
 					construir algo que faça a diferença?
 				</p>
 
-				<div class="social-links">
+				<div class="flex gap-4 text-xl justify-center">
 					<a
 						href="https://www.linkedin.com/in/gabriel-siqueira-5256111ab/"
 						class="fa-brands fa-linkedin"
@@ -88,7 +129,8 @@
 			</section>
 		</main>
 
-		<footer>
+		<!-- Footer -->
+		<footer class="text-center opacity-50 py-2 text-sm">
 			<p>© Gabriel Siqueira 2025</p>
 		</footer>
 	</body>

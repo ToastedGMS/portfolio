@@ -13,61 +13,102 @@
 			property="og:url"
 			content="https://toastedgms.github.io/portfolio/about-en.html"
 		/>
-
 		<meta
 			name="description"
-			content="More information about Gabriel Siqueira and his journey as a web developer."
+			content="More information about Gabriel Siqueira and his journey as a developer."
 		/>
-		<link rel="stylesheet" href="stylesheets/index.css" />
+
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+
 		<title>About - Gabriel Siqueira</title>
+
+		<style>
+			@keyframes slideFadeIn {
+				0% {
+					opacity: 0;
+					transform: translateY(-20px);
+				}
+				100% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+		</style>
 	</head>
-	<body>
-		<header>
-			<nav class="main-nav">
+	<body class="m-0 p-0 bg-[#f4f5f4] font-sans text-[#2b2a2a]">
+		<!-- Header -->
+		<header
+			class="px-4 py-4 bg-white flex flex-wrap justify-between items-center border-b border-gray-300 text-sm"
+		>
+			<nav class="w-full flex flex-row justify-between items-center gap-2">
 				<p
-					class="site-title"
+					class="font-bold text-lg cursor-pointer"
 					onclick="window.location.href='english.html'"
-					style="cursor: pointer"
 				>
 					Gabriel Siqueira
 				</p>
-				<ul class="nav-links">
-					<li><a href="./index.html">Português</a></li>
-					<li><a href="./english.html">English</a></li>
-					<li><a href="./about-en.html">About</a></li>
+				<ul class="list-none flex flex-row gap-2 sm:gap-4 mt-2 sm:mt-0">
+					<li>
+						<a
+							href="./index.html"
+							class="font-medium text-gray-800 hover:text-[#536461] transition-colors"
+							>Português</a
+						>
+					</li>
+					<li>
+						<a
+							href="./english.html"
+							class="font-medium text-gray-800 hover:text-[#536461] transition-colors"
+							>English</a
+						>
+					</li>
+					<li>
+						<a
+							href="./about-en.html"
+							class="font-medium text-gray-800 hover:text-[#536461] transition-colors"
+							>About</a
+						>
+					</li>
 				</ul>
 			</nav>
 		</header>
 
-		<main>
-			<h1>About Me</h1>
+		<!-- Main -->
+		<main class="flex flex-col items-center justify-center">
+			<h1
+				class="text-center font-bold text-[#536461] text-[clamp(1.5rem,6vw,3em)] min-h-[90vh] px-4 flex items-center justify-center animate-[slideFadeIn_3s_ease-in]"
+			>
+				About Me
+			</h1>
 
-			<section class="about-section">
-				<p class="about">
-					My name is Gabriel Siqueira, I build digital solutions. I'm a
+			<section
+				class="flex flex-col items-center text-center px-4 py-6 max-w-[800px] mx-auto text-sm sm:text-base"
+			>
+				<p class="mb-4">
+					My name is Gabriel Siqueira, and I build digital solutions. I'm a
 					developer based in the metropolitan area of Belo Horizonte. My focus
 					is on using web development tools to create end-to-end applications
-					that deliver clarity, efficiency, and real results.
+					that deliver clarity, efficiency, and results.
 				</p>
 
-				<p class="about">
-					My projects start from a simple idea: using code to save time,
-					automate tasks, and support smarter decisions. With tools like React,
-					Node.js, Express, and PostgreSQL, I make the web work for you.
+				<p class="mb-4">
+					My projects start from a simple idea: use code to save time, automate
+					tasks, and support better decisions. With tools like React, Node.js,
+					Express, and PostgreSQL, I make the web work for you.
 				</p>
 
-				<p class="about">
-					I'm currently looking for my first professional opportunity in the
-					field. I'm ready to contribute to projects that demand initiative,
-					practical thinking, and real-world solutions that make a difference.
-					Let's build something that matters.
+				<p class="mb-6">
+					I'm seeking my next professional opportunity in the field. I'm ready
+					to contribute to projects that demand initiative, practical thinking,
+					and solutions that truly make a difference. Let's build something
+					impactful together.
 				</p>
 
-				<div class="social-links">
+				<div class="flex gap-4 text-xl justify-center">
 					<a
 						href="https://www.linkedin.com/in/gabriel-siqueira-5256111ab/"
 						class="fa-brands fa-linkedin"
@@ -86,7 +127,8 @@
 			</section>
 		</main>
 
-		<footer>
+		<!-- Footer -->
+		<footer class="text-center opacity-50 py-2 text-sm">
 			<p>© Gabriel Siqueira 2025</p>
 		</footer>
 	</body>
