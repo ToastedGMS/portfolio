@@ -42,29 +42,63 @@
 		</script>
 
 		<style>
-			@keyframes slideFadeIn {
+			.carousel-text {
+				position: relative;
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.slide {
+				position: absolute;
+				width: 100%;
+				opacity: 0;
+				transform: translateX(100%);
+				animation: slideSequence 17s ease-in-out infinite;
+			}
+
+			.slide-1 {
+				animation-delay: 0s;
+			}
+			.slide-2 {
+				animation-delay: 4.25s;
+			}
+			.slide-3 {
+				animation-delay: 8.5s;
+			}
+			.slide-4 {
+				animation-delay: 12.75s;
+			}
+
+			@keyframes slideSequence {
 				0% {
 					opacity: 0;
-					transform: translateY(-20px);
+					transform: translateX(100%);
+				}
+				10% {
+					opacity: 1;
+					transform: translateX(0);
+				}
+				25% {
+					opacity: 1;
+					transform: translateX(0);
+				}
+				35% {
+					opacity: 0;
+					transform: translateX(-20%);
 				}
 				100% {
-					opacity: 1;
-					transform: translateY(0);
+					opacity: 0;
+					transform: translateX(-100%);
 				}
-			}
-			.scrollbar-hide::-webkit-scrollbar {
-				display: none;
-			}
-			.scrollbar-hide {
-				-ms-overflow-style: none;
-				scrollbar-width: none;
 			}
 		</style>
 	</head>
 	<body class="m-0 p-0 bg-[#f4f5f4] font-sans text-[#2b2a2a]">
 		<!-- Header -->
 		<header
-			class="px-4 py-4 bg-white flex flex-wrap justify-between items-center border-b border-gray-300 text-sm"
+			class="px-4 py-4 bg-white flex flex-wrap justify-between items-center border-b border-gray-300 text-sm fixed top-0 w-full z-50"
 		>
 			<nav class="w-full flex flex-row justify-between items-center gap-2">
 				<p class="font-extrabold text-lg cursor-pointer">Gabriel Siqueira</p>
@@ -96,11 +130,64 @@
 
 		<!-- Main -->
 		<main class="flex flex-col items-center justify-center">
-			<h1
-				class="text-center font-bold text-[#536461] text-[clamp(1.5rem,6vw,3em)] min-h-[90vh] px-4 flex items-center justify-center animate-[slideFadeIn_3s_ease-in]"
+			<div
+				class="relative overflow-hidden min-h-[100vh] w-full flex items-center justify-center px-4 bg-[#f4f5f4]"
 			>
-				Digital solutions that save time and boost results.
-			</h1>
+				<!-- Video Background -->
+				<video
+					autoplay
+					muted
+					loop
+					playsinline
+					class="absolute inset-0 w-full h-full object-cover z-0"
+				>
+					<source src="./public/MosesJustinPixabay.mp4" type="video/mp4" />
+					Your browser does not support the video tag.
+				</video>
+
+				<!-- Overlay for readability -->
+				<div class="absolute inset-0 bg-black/30 z-10"></div>
+
+				<!-- Text Carousel -->
+				<div
+					class="carousel-text z-20 w-full text-center font-bold text-white text-[clamp(1.5rem,6vw,3em)]"
+				>
+					<span class="slide slide-1"
+						>Digital solutions that save time and boost results.</span
+					>
+					<span class="slide slide-2"
+						>Development focused on efficiency and collaboration.</span
+					>
+					<span class="slide slide-3"
+						>Clear communication for tailored solutions.</span
+					>
+					<span class="slide slide-4">Your next project starts here.</span>
+				</div>
+
+				<!-- Attribution -->
+				<div
+					class="absolute bottom-2 right-2 text-xs text-white opacity-70 z-30"
+				>
+					Video by
+					<a
+						href="https://pixabay.com/users/km007_-23606303/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=91744"
+						target="_blank"
+						rel="noopener"
+						class="underline"
+					>
+						Moses Justin
+					</a>
+					from
+					<a
+						href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=91744"
+						target="_blank"
+						rel="noopener"
+						class="underline"
+					>
+						Pixabay
+					</a>
+				</div>
+			</div>
 
 			<!-- Projects -->
 			<section class="flex flex-col gap-6 px-4 py-6 w-full">
@@ -233,9 +320,9 @@
 								</li>
 							</ul>
 							<p>
-								This project delivers a complete solution — from UI design to
-								backend infrastructure — focused on usability, security, and
-								scalability.
+								This project delivers a completely tailored solution, designed
+								from the UI to the backend infrastructure with focus on
+								usability, security, and scalability.
 							</p>
 						</div>
 						<a
@@ -272,6 +359,14 @@
 						href="https://github.com/ToastedGMS"
 						class="fa-brands fa-github"
 						aria-label="GitHub"
+						target="_blank"
+						rel="noopener"
+					></a>
+					<a
+						href="https://wa.me/5531991947556?text=Hi+Gabriel%2C+I+just+visited+your+portfolio+and+I%27m+interested+in+discussing+a+digital+project.+Can+we+talk+more+about+it%3F
+"
+						class="fa-brands fa-whatsapp"
+						aria-label="Whatsapp"
 						target="_blank"
 						rel="noopener"
 					></a>
