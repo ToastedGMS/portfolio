@@ -5,7 +5,7 @@ It is a fully static site, hosted with GitHub Pages.
 
 ## 🌐 Live Site
 
-👉 [https://toastedgms.github.io/portfolio/index.html]
+👉 [https://gabrielsiqueira.dev]
 
 ## 📁 Structure
 
@@ -13,8 +13,7 @@ It is a fully static site, hosted with GitHub Pages.
 - `english.html` — Home page (English)
 - `about.html` — About me (Portuguese)
 - `about-en.html` — About me (English)
-- `public/` — Images and assets
-- `stylesheets/` — CSS styles
+- `images/` — Images and assets
 
 ## 🛠️ Technologies
 
