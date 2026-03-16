@@ -25,7 +25,11 @@
 			name="description"
 			content="Portfolio website of Gabriel Siqueira, a software developer specializing in modern, scalable digital solutions."
 		/>
-		<link rel="icon" href="https://gabrielsiqueira.dev/images/favicon.ico" type="image/x-icon" />
+		<link
+			rel="icon"
+			href="https://gabrielsiqueira.dev/images/favicon.ico"
+			type="image/x-icon"
+		/>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -270,79 +274,116 @@
 							</button>
 						</div>
 
-						<!-- Project description -->
 						<div class="flex flex-col gap-4 text-sm sm:text-base px-2">
-							<h2 class="text-xl sm:text-2xl font-bold">Paulada Games</h2>
+							<h2 class="text-xl sm:text-2xl font-bold">
+								Full-Stack E-commerce & Catalog Solution
+							</h2>
+
+							<span
+								class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded w-fit"
+							>
+								In Production
+							</span>
+
 							<p>
-								<strong>Paulada Games</strong> is a custom-built e-commerce
-								system designed to connect customers and businesses with speed
-								and ease.
+								This is a
+								<strong>complete and customized e-commerce system</strong>,
+								developed to optimize sales conversion and inventory management
+								for the tech retail sector.
 							</p>
+
 							<p>
-								Split into two frontends — one for customers and one for admins
-								— the system offers full control over products, categories, and
-								users, with real-time updates. Built with a
-								<strong>Feature-First</strong> architecture for scalability and
-								maintainability.
+								The ecosystem consists of two distinct front-ends: an interface
+								optimized for customer experience and a robust
+								<strong>Administrative Dashboard</strong> for total control over
+								products, categories, and access metrics.
 							</p>
+
 							<p>
-								Based in the city of Contagem - MG, the store was looking for a
-								solution to quickly and efficiently direct its customers from a
-								product search to its WhatsApp. In addition, we implemented a
-								fully managed catalog controlled by the store administrator,
-								giving them complete control over their products and how they
-								are displayed.
+								The solution was designed to solve a common challenge in local
+								commerce: automatically converting customer interest into direct
+								service via <strong>WhatsApp</strong>. The administrator has
+								complete autonomy over the catalog, allowing real-time updates
+								that reflect instantly on the customer interface.
 							</p>
 
 							<ul class="list-disc list-inside space-y-2">
 								<li>
-									<strong>WhatsApp Integration:</strong> Shopping cart sends
-									items directly to the store’s WhatsApp.
+									<strong>Direct Conversion:</strong> Checkout flow that directs
+									the detailed shopping cart to the merchant's WhatsApp.
 								</li>
 								<li>
-									<strong>Admin Dashboard:</strong> JWT-protected interface with
-									full CRUD for products, categories, and admin users.
+									<strong>Admin Panel:</strong> Management system protected by
+									<strong>JWT</strong> authentication with full CRUD operations.
 								</li>
 								<li>
-									<strong>Image Uploads:</strong> Integrated with
-									<code>multer</code> and <code>Cloudinary</code>, with cropping
-									and preview via <code>react-easy-crop</code>.
+									<strong>Media Management:</strong> Image upload and processing
+									using <code>Multer</code>, <code>Cloudinary</code>, and
+									front-end pre-processing with <code>react-easy-crop</code>.
 								</li>
 								<li>
-									<strong>Responsive UI:</strong> Swipeable carousels, dynamic
-									pages, mobile-first design.
+									<strong>Mobile-First Experience:</strong> Responsive UI with
+									swipe support, dynamic navigation, and optimized loading.
 								</li>
 								<li>
-									<strong>RESTful Backend:</strong> Built with
-									<code>Node.js</code>, <code>Express</code>,
-									<code>PostgreSQL</code>, and <code>Prisma ORM</code>.
+									<strong>Backend Architecture:</strong> Scalable RESTful API
+									built with <code>Node.js</code>, <code>Express</code>, and
+									data persistence with <code>PostgreSQL</code> via
+									<code>Prisma ORM</code>.
 								</li>
 								<li>
-									<strong>Automated Testing:</strong> Unit and integration tests
-									using <code>Vitest</code> and <code>Jest</code>, following
-									TDD.
+									<strong>Code Quality:</strong> Test coverage with
+									<code>Vitest</code> and <code>Jest</code>, applying
+									<strong>TDD (Test Driven Development)</strong> principles.
 								</li>
 								<li>
-									<strong>Clean Architecture:</strong> Feature-based structure
-									with TypeScript.
-								</li>
-								<li>
-									<strong>Tech Stack:</strong> React, React Router, React Query,
-									TailwindCSS, Vitest, Vite, Prisma, PostgreSQL, Express,
-									Node.js, Cloudinary, Multer, JWT, TypeScript.
+									<strong>Software Engineering:</strong> Structured with
+									<strong>Clean Architecture</strong> and strict typing with
+									<code>TypeScript</code> for high maintainability.
 								</li>
 							</ul>
-							<p>
-								This project delivers a completely tailored solution, designed
-								with focus on usability, security, and scalability.
+
+							<p class="italic text-slate-500">
+								Tech Stack: React, React Router, React Query, TailwindCSS,
+								Vitest, Vite, Prisma, PostgreSQL, Express, Node.js, Cloudinary,
+								Multer, JWT, TypeScript.
 							</p>
 						</div>
+
+						<div class="flex flex-wrap gap-4 mt-4">
+							<a
+								href="https://catalog-front-production.up.railway.app/"
+								target="_blank"
+								class="border-4 px-6 py-2 rounded-3xl font-bold bg-slate-800 text-white hover:bg-slate-700 hover:shadow-lg transition-all"
+							>
+								View Demo (Showcase)
+							</a>
+							<a
+								href="https://github.com/ToastedGMS/catalog-front"
+								target="_blank"
+								class="border-4 border-slate-800 px-6 py-2 rounded-3xl font-bold hover:bg-slate-100 hover:shadow-lg transition-all"
+							>
+								View Code on GitHub
+							</a>
+						</div>
+
+						<p
+							class="bg-blue-50 border-l-4 border-blue-500 p-4 text-blue-700 my-4 italic"
+						>
+							<strong>Production Note:</strong> This system was custom-developed
+							for a real-world client and is currently in operation. You can
+							view the official live implementation by clicking the link below,
+							while the source code provided here refers to the sanitized
+							portfolio version.
+						</p>
+
 						<a
 							href="https://www.pauladagames.com.br"
 							target="_blank"
 							class="border-4 px-4 py-2 rounded-3xl font-bold hover:bg-slate-200 hover:shadow-lg"
-							>Explore Paulada Games</a
 						>
+							Visit Paulada Games
+						</a>
 					</article>
 				</div>
 			</section>
