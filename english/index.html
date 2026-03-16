@@ -446,7 +446,173 @@
 					</article>
 				</div>
 			</section>
+			<section class="flex flex-col gap-6 px-4 py-6 w-full">
+				<h2 class="text-xl sm:text-2xl text-center font-semibold">
+					Social Network System & Real-time Interaction
+				</h2>
+				<div class="flex justify-center w-full">
+					<article
+						id="social-network"
+						class="flex items-center flex-col gap-6 w-full max-w-[900px] p-4 rounded-2xl bg-[#f0f4f8] border border-[#7a928238] cursor-pointer"
+					>
+						<div class="relative w-full max-w-[900px]">
+							<div
+								class="flex overflow-x-auto gap-4 scroll-smooth snap-x snap-mandatory scrollbar-hide"
+							>
+								<figure
+									class="flex-[0_0_100%] snap-start flex justify-center items-center"
+								>
+									<img
+										src="/images/social-home.webp"
+										alt="Social Network Feed"
+										class="w-full h-auto rounded-2xl object-cover"
+									/>
+								</figure>
+								<figure
+									class="flex-[0_0_100%] snap-start flex justify-center items-center"
+								>
+									<img
+										src="/images/social-notifications.webp"
+										alt="Notifications System"
+										class="w-full h-auto rounded-2xl object-cover"
+									/>
+								</figure>
+								<figure
+									class="flex-[0_0_100%] snap-start flex justify-center items-center"
+								>
+									<img
+										src="/images/social-profile.webp"
+										alt="User Profile"
+										class="w-full h-auto rounded-2xl object-cover"
+									/>
+								</figure>
+							</div>
 
+							<button
+								onclick="scrollCarouselLeft()"
+								class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 px-2 py-1 sm:px-3 sm:py-2 bg-slate-400 text-white rounded-full z-20 hover:bg-slate-700 text-sm sm:text-base"
+							>
+								<i class="fa-solid fa-arrow-left"></i>
+							</button>
+
+							<button
+								onclick="scrollCarouselRight()"
+								class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 px-2 py-1 sm:px-3 sm:py-2 bg-slate-400 text-white rounded-full z-20 hover:bg-slate-700 text-sm sm:text-base"
+							>
+								<i class="fa-solid fa-arrow-right"></i>
+							</button>
+						</div>
+
+						<div class="flex flex-col gap-4 text-sm sm:text-base px-2">
+							<h2 class="text-xl sm:text-2xl font-bold">
+								Full-Stack Ecosystem with WebSockets
+							</h2>
+
+							<div class="flex flex-wrap gap-2">
+								<span
+									class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded w-fit"
+								>
+									Real-Time Ready
+								</span>
+								<span
+									class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded w-fit"
+								>
+									Complex Data Architecture
+								</span>
+							</div>
+
+							<p>
+								This project is a
+								<strong>complete social network platform</strong> focused on
+								fluid user experience and instant communication, simulating the
+								core features of modern social media giants.
+							</p>
+
+							<p>
+								The primary technical highlight is the integration of
+								<strong>WebSockets</strong>, ensuring users receive interactions
+								(likes, comments, friend requests) the exact moment they happen
+								without ever needing to refresh the page.
+							</p>
+
+							<ul class="list-disc list-inside space-y-2">
+								<li>
+									<strong>Instant Interactivity:</strong> Socket.io
+									implementation for real-time notifications and live feed
+									updates.
+								</li>
+								<li>
+									<strong>Efficient State Management:</strong> Extensive use of
+									<code>TanStack Query</code> for smart data caching,
+									significantly reducing latency and unnecessary API calls.
+								</li>
+								<li>
+									<strong>Complex Relationships:</strong> Relational database
+									modeling for mutual friendships, dynamic feeds, and
+									multi-level comment threads using <code>Prisma ORM</code>.
+								</li>
+								<li>
+									<strong>Secure Authentication:</strong> JWT-based login system
+									featuring <code>Bcrypt.js</code> for secure password hashing.
+								</li>
+								<li>
+									<strong>Test-Driven Development:</strong> Comprehensive unit
+									and integration testing with <code>Jest</code>, ensuring the
+									integrity of all backend business logic and route stability.
+								</li>
+								<li>
+									<strong>Scalability:</strong> Backend structured with
+									<code>Node.js</code> and <code>Express</code>, utilizing
+									<code>PostgreSQL</code> for robust and reliable data
+									persistence.
+								</li>
+							</ul>
+
+							<p class="italic text-slate-500">
+								Tech Stack: React, TanStack Query, Socket.io, TailwindCSS, Vite,
+								Node.js, Express, Prisma, PostgreSQL, Jest, JWT.
+							</p>
+						</div>
+
+						<div class="flex flex-wrap gap-4 mt-4">
+							<a
+								href="https://socialnetworkfrontend-production.up.railway.app/"
+								target="_blank"
+								class="border-4 px-6 py-2 rounded-3xl font-bold bg-slate-800 text-white hover:bg-slate-700 hover:shadow-lg transition-all"
+							>
+								Live Demo
+							</a>
+							<a
+								href="https://github.com/ToastedGMS/socialnetworkfrontend"
+								target="_blank"
+								class="border-4 border-slate-800 px-6 py-2 rounded-3xl font-bold hover:bg-slate-100 hover:shadow-lg transition-all"
+							>
+								Frontend Repository
+							</a>
+							<a
+								href="https://github.com/ToastedGMS/SocialNetworkBackend"
+								target="_blank"
+								class="border-4 border-slate-800 px-6 py-2 rounded-3xl font-bold hover:bg-slate-100 hover:shadow-lg transition-all"
+							>
+								Backend Repository
+							</a>
+						</div>
+
+						<p
+							class="bg-amber-50 border-l-4 border-amber-500 p-4 text-amber-800 my-4 italic"
+						>
+							<strong>Development Note:</strong> This was my first
+							high-complexity project. While the current version uses JavaScript
+							and is still reaching full test coverage, it represents a pivotal
+							moment in my career where I mastered real-time data flow and
+							complex state management. My growth since then—especially in
+							<strong>TypeScript</strong> and
+							<strong>Clean Architecture</strong>—can be seen in my more recent
+							works like the Paulada Games ecosystem.
+						</p>
+					</article>
+				</div>
+			</section>
 			<!-- About -->
 			<section
 				class="flex flex-col items-center text-center px-4 py-6 max-w-[800px] mx-auto text-sm sm:text-base"
