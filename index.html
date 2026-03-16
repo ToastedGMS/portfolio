@@ -36,13 +36,13 @@
 		/>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script>
-			function scrollCarouselLeft() {
-				const carousel = document.querySelector('.scroll-smooth');
+			function scrollCarouselLeft(btn) {
+				const carousel = btn.parentElement.querySelector('.overflow-x-auto');
 				carousel.scrollBy({ left: -300, behavior: 'smooth' });
 			}
 
-			function scrollCarouselRight() {
-				const carousel = document.querySelector('.scroll-smooth');
+			function scrollCarouselRight(btn) {
+				const carousel = btn.parentElement.querySelector('.overflow-x-auto');
 				carousel.scrollBy({ left: 300, behavior: 'smooth' });
 			}
 		</script>
@@ -316,7 +316,7 @@
 							<!-- Navigation Buttons -->
 							<!-- Left Arrow Button -->
 							<button
-								onclick="scrollCarouselLeft()"
+								onclick="scrollCarouselLeft(this)"
 								class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 px-2 py-1 sm:px-3 sm:py-2 bg-slate-400 text-white rounded-full z-20 hover:bg-slate-700 text-sm sm:text-base"
 							>
 								<i class="fa-solid fa-arrow-left"></i>
@@ -324,7 +324,7 @@
 
 							<!-- Right Arrow Button -->
 							<button
-								onclick="scrollCarouselRight()"
+								onclick="scrollCarouselRight(this)"
 								class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 px-2 py-1 sm:px-3 sm:py-2 bg-slate-400 text-white rounded-full z-20 hover:bg-slate-700 text-sm sm:text-base"
 							>
 								<i class="fa-solid fa-arrow-right"></i>
@@ -465,7 +465,7 @@
 									class="flex-[0_0_100%] snap-start flex justify-center items-center"
 								>
 									<img
-										src="/images/social-home.webp"
+										src="/images/social-posts.webp"
 										alt="Rede Social Feed"
 										class="w-full h-auto rounded-2xl object-cover"
 									/>
@@ -488,17 +488,44 @@
 										class="w-full h-auto rounded-2xl object-cover"
 									/>
 								</figure>
+								<figure
+									class="flex-[0_0_100%] snap-start flex justify-center items-center"
+								>
+									<img
+										src="/images/social-comments.webp"
+										alt="Comentários"
+										class="w-full h-auto rounded-2xl object-cover"
+									/>
+								</figure>
+								<figure
+									class="flex-[0_0_100%] snap-start flex justify-center items-center"
+								>
+									<img
+										src="/images/social-friends.webp"
+										alt="Amigos do Usuário"
+										class="w-full h-auto rounded-2xl object-cover"
+									/>
+								</figure>
+								<figure
+									class="flex-[0_0_100%] snap-start flex justify-center items-center"
+								>
+									<img
+										src="/images/social-login.webp"
+										alt="Login do Usuário"
+										class="w-full h-auto rounded-2xl object-cover"
+									/>
+								</figure>
 							</div>
 
 							<button
-								onclick="scrollCarouselLeft()"
+								onclick="scrollCarouselLeft(this)"
 								class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 px-2 py-1 sm:px-3 sm:py-2 bg-slate-400 text-white rounded-full z-20 hover:bg-slate-700 text-sm sm:text-base"
 							>
 								<i class="fa-solid fa-arrow-left"></i>
 							</button>
 
 							<button
-								onclick="scrollCarouselRight()"
+								onclick="scrollCarouselRight(this)"
 								class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 px-2 py-1 sm:px-3 sm:py-2 bg-slate-400 text-white rounded-full z-20 hover:bg-slate-700 text-sm sm:text-base"
 							>
 								<i class="fa-solid fa-arrow-right"></i>
